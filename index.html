@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Create your travel profile: passport details, languages and trip preferences.">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <title>Create your travel profile</title>
+</head>
+<body>
+<main>
+    <h1>Create your travel profile</h1>
+    <p class="intro">Fields marked <span aria-hidden="true">*</span><span class="sr-only">with an asterisk</span> are required.</p>
+    <form action="http://www.no-where.com/formhandler.php" method="get">
+        <fieldset>
+            <legend>Your details</legend>
+            <div class="form-grid">
+
+                <fieldset class="form-section passport-section">
+                    <legend>Passport and credentials</legend>
+                    <div class="field">
+                        <label for="firstNameField">First name <span aria-hidden="true">*</span></label>
+                        <input type="text" name="firstNameField" id="firstNameField" autocomplete="given-name" minlength="2" maxlength="20" pattern="[\p{L} \-]+" required aria-describedby="firstName-hint">
+                        <p class="hint" id="firstName-hint">2–20 letters, spaces or hyphens.</p>
+                    </div>
+                    <div class="field">
+                        <label for="lastNameField">Last name <span aria-hidden="true">*</span></label>
+                        <input type="text" name="lastNameField" id="lastNameField" autocomplete="family-name" minlength="2" maxlength="20" pattern="[\p{L} \-]+" required aria-describedby="lastName-hint">
+                        <p class="hint" id="lastName-hint">2–20 letters, spaces or hyphens.</p>
+                    </div>
+                    <div class="field">
+                        <label for="passportField">Passport number <span aria-hidden="true">*</span></label>
+                        <input type="text" name="passportField" id="passportField" minlength="3" maxlength="15" pattern="[a-zA-Z0-9]+" required aria-describedby="passport-hint">
+                        <p class="hint" id="passport-hint">3–15 letters or digits, no spaces.</p>
+                    </div>
+                    <div class="field">
+                        <label for="nationality">Nationality <span aria-hidden="true">*</span></label>
+                        <select name="nationality" id="nationality" required>
+                            <option value="" disabled selected>Select nationality</option>
+                            <optgroup label="Europe"><option value="austrian">Austrian</option><option value="belgian">Belgian</option><option value="british">British</option><option value="bulgarian">Bulgarian</option><option value="croatian">Croatian</option><option value="czech">Czech</option><option value="danish">Danish</option><option value="dutch">Dutch</option><option value="finnish">Finnish</option><option value="french">French</option><option value="german">German</option><option value="greek">Greek</option><option value="hungarian">Hungarian</option><option value="irish">Irish</option><option value="italian">Italian</option><option value="moldovan">Moldovan</option><option value="norwegian">Norwegian</option><option value="polish">Polish</option><option value="portuguese">Portuguese</option><option value="romanian">Romanian</option><option value="spanish">Spanish</option><option value="swedish">Swedish</option><option value="swiss">Swiss</option><option value="ukrainian">Ukrainian</option></optgroup>
+<optgroup label="Asia"><option value="afghan">Afghan</option><option value="bangladeshi">Bangladeshi</option><option value="chinese">Chinese</option><option value="filipino">Filipino</option><option value="indian">Indian</option><option value="indonesian">Indonesian</option><option value="iranian">Iranian</option><option value="iraqi">Iraqi</option><option value="israeli">Israeli</option><option value="japanese">Japanese</option><option value="kazakh">Kazakh</option><option value="korean">Korean</option><option value="malaysian">Malaysian</option><option value="pakistani">Pakistani</option><option value="saudi">Saudi</option><option value="singaporean">Singaporean</option><option value="taiwanese">Taiwanese</option><option value="thai">Thai</option><option value="turkish">Turkish</option><option value="vietnamese">Vietnamese</option></optgroup>
+<optgroup label="Americas"><option value="american">American</option><option value="argentine">Argentine</option><option value="brazilian">Brazilian</option><option value="canadian">Canadian</option><option value="chilean">Chilean</option><option value="colombian">Colombian</option><option value="mexican">Mexican</option><option value="peruvian">Peruvian</option></optgroup>
+<optgroup label="Africa"><option value="egyptian">Egyptian</option><option value="ethiopian">Ethiopian</option><option value="ghanaian">Ghanaian</option><option value="kenyan">Kenyan</option><option value="moroccan">Moroccan</option><option value="nigerian">Nigerian</option><option value="south-african">South African</option></optgroup>
+<optgroup label="Oceania"><option value="australian">Australian</option><option value="new-zealander">New Zealander</option></optgroup><option value="other">Other</option>
+                        </select>
+                    </div>
+                </fieldset>
+
+                <fieldset class="form-section contact-section">
+                    <legend>Contact information</legend>
+                    <div class="field">
+                        <label for="emergencyField">Emergency contact <span aria-hidden="true">*</span></label>
+                        <input type="text" name="emergencyField" id="emergencyField" minlength="3" maxlength="41" required aria-describedby="emergency-hint">
+                        <p class="hint" id="emergency-hint">First and last name.</p>
+                    </div>
+                    <div class="field">
+                        <label for="emergencyPhoneField">Emergency contact phone number <span aria-hidden="true">*</span></label>
+                        <input type="tel" name="emergencyPhoneField" id="emergencyPhoneField" inputmode="numeric" pattern="[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}" required aria-describedby="phone-hint">
+                        <p class="hint" id="phone-hint">Format: 12-34-56-78.</p>
+                    </div>
+                </fieldset>
+
+                <fieldset class="form-section personal-section">
+                    <legend>Personal information</legend>
+
+                    <fieldset class="choice-group">
+                        <legend>Languages spoken</legend>
+                        <details class="lang"><summary class="summary">Common languages</summary><div class="lang_selection"><label><input type="checkbox" name="languages" value="english"> English</label>
+<label><input type="checkbox" name="languages" value="spanish"> Spanish</label>
+<label><input type="checkbox" name="languages" value="french"> French</label></div></details>
+<details class="lang"><summary class="summary">European languages</summary><div class="lang_selection"><label><input type="checkbox" name="languages" value="german"> German</label>
+<label><input type="checkbox" name="languages" value="italian"> Italian</label>
+<label><input type="checkbox" name="languages" value="portuguese"> Portuguese</label>
+<label><input type="checkbox" name="languages" value="russian"> Russian</label>
+<label><input type="checkbox" name="languages" value="polish"> Polish</label>
+<label><input type="checkbox" name="languages" value="dutch"> Dutch</label>
+<label><input type="checkbox" name="languages" value="ukrainian"> Ukrainian</label>
+<label><input type="checkbox" name="languages" value="greek"> Greek</label>
+<label><input type="checkbox" name="languages" value="swedish"> Swedish</label></div></details>
+<details class="lang"><summary class="summary">Asian &amp; Middle Eastern languages</summary><div class="lang_selection"><label><input type="checkbox" name="languages" value="mandarin"> Mandarin Chinese</label>
+<label><input type="checkbox" name="languages" value="hindi"> Hindi</label>
+<label><input type="checkbox" name="languages" value="arabic"> Arabic</label>
+<label><input type="checkbox" name="languages" value="bengali"> Bengali</label>
+<label><input type="checkbox" name="languages" value="japanese"> Japanese</label>
+<label><input type="checkbox" name="languages" value="punjabi"> Punjabi</label>
+<label><input type="checkbox" name="languages" value="korean"> Korean</label>
+<label><input type="checkbox" name="languages" value="vietnamese"> Vietnamese</label>
+<label><input type="checkbox" name="languages" value="urdu"> Urdu</label>
+<label><input type="checkbox" name="languages" value="turkish"> Turkish</label>
+<label><input type="checkbox" name="languages" value="tagalog"> Tagalog / Filipino</label>
+<label><input type="checkbox" name="languages" value="thai"> Thai</label>
+<label><input type="checkbox" name="languages" value="persian"> Persian (Farsi)</label>
+<label><input type="checkbox" name="languages" value="other"> Other</label></div></details>
+                    </fieldset>
+
+                    <fieldset class="choice-group inline">
+                        <legend>How do you like to travel?</legend>
+                        <label><input type="radio" name="groupSize" value="solo"> Solo</label>
+                        <label><input type="radio" name="groupSize" value="pair"> Pair</label>
+                        <label><input type="radio" name="groupSize" value="group"> Group (more than 2)</label>
+                    </fieldset>
+
+                    <div class="profile">
+                        <label for="profilePicture">Upload your profile picture</label>
+                        <input type="file" id="profilePicture" name="profilePicture" accept="image/*">
+                    </div>
+                </fieldset>
+
+                <fieldset class="form-section trips-section">
+                    <legend>Trips and activities</legend>
+
+                    <div class="field">
+                        <label for="currency">Currency <span aria-hidden="true">*</span></label>
+                        <select name="currency" id="currency" required>
+                            <option value="" disabled selected>Select currency</option>
+                            <optgroup label="Europe"><option value="EUR">EUR - Euro (€)</option><option value="GBP">GBP - British Pound (£)</option><option value="CHF">CHF - Swiss Franc</option><option value="CZK">CZK - Czech Koruna (Kč)</option><option value="DKK">DKK - Danish Krone (kr)</option><option value="HUF">HUF - Hungarian Forint (Ft)</option><option value="NOK">NOK - Norwegian Krone (kr)</option><option value="PLN">PLN - Polish Złoty (zł)</option><option value="RON">RON - Romanian Leu (lei)</option><option value="SEK">SEK - Swedish Krona (kr)</option><option value="TRY">TRY - Turkish Lira (₺)</option></optgroup>
+<optgroup label="Asia"><option value="AED">AED - UAE Dirham</option><option value="CNY">CNY - Chinese Yuan (¥)</option><option value="HKD">HKD - Hong Kong Dollar (HK$)</option><option value="IDR">IDR - Indonesian Rupiah (Rp)</option><option value="ILS">ILS - Israeli Shekel (₪)</option><option value="INR">INR - Indian Rupee (₹)</option><option value="JPY">JPY - Japanese Yen (¥)</option><option value="KRW">KRW - South Korean Won (₩)</option><option value="MYR">MYR - Malaysian Ringgit (RM)</option><option value="PHP">PHP - Philippine Peso (₱)</option><option value="PKR">PKR - Pakistani Rupee (₨)</option><option value="SAR">SAR - Saudi Riyal</option><option value="SGD">SGD - Singapore Dollar (S$)</option><option value="THB">THB - Thai Baht (฿)</option><option value="VND">VND - Vietnamese Dong (₫)</option></optgroup>
+<optgroup label="Americas"><option value="USD">USD - US Dollar ($)</option><option value="CAD">CAD - Canadian Dollar (CA$)</option><option value="BRL">BRL - Brazilian Real (R$)</option><option value="MXN">MXN - Mexican Peso ($)</option><option value="ARS">ARS - Argentine Peso ($)</option><option value="CLP">CLP - Chilean Peso ($)</option><option value="COP">COP - Colombian Peso ($)</option><option value="PEN">PEN - Peruvian Sol (S/.)</option></optgroup>
+<optgroup label="Africa"><option value="EGP">EGP - Egyptian Pound (E£)</option><option value="GHS">GHS - Ghanaian Cedi (GH₵)</option><option value="KES">KES - Kenyan Shilling (KSh)</option><option value="MAD">MAD - Moroccan Dirham</option><option value="NGN">NGN - Nigerian Naira (₦)</option><option value="ZAR">ZAR - South African Rand (R)</option></optgroup>
+<optgroup label="Oceania"><option value="AUD">AUD - Australian Dollar (A$)</option><option value="FJD">FJD - Fijian Dollar (FJ$)</option><option value="NZD">NZD - New Zealand Dollar (NZ$)</option></optgroup><option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="trips-and-activities">
+                        <fieldset class="choice-group">
+                            <legend>Continents visited</legend>
+                            <label><input type="checkbox" name="continents" value="asia"> Asia</label>
+<label><input type="checkbox" name="continents" value="africa"> Africa</label>
+<label><input type="checkbox" name="continents" value="north"> North America</label>
+<label><input type="checkbox" name="continents" value="south"> South America</label>
+<label><input type="checkbox" name="continents" value="antarctica"> Antarctica</label>
+<label><input type="checkbox" name="continents" value="europe"> Europe</label>
+<label><input type="checkbox" name="continents" value="australia"> Australia</label>
+                        </fieldset>
+
+                        <fieldset class="choice-group">
+                            <legend>Types of activities</legend>
+                            <label><input type="checkbox" name="activities" value="adventure"> Adventure in nature (hiking, camping, sports)</label>
+<label><input type="checkbox" name="activities" value="cultural"> Cultural activities (museums, historical sites)</label>
+<label><input type="checkbox" name="activities" value="relaxation"> Relaxation (beach, spa)</label>
+<label><input type="checkbox" name="activities" value="nightlife"> Nightlife (clubs, concerts)</label>
+                        </fieldset>
+
+                        <div class="price-slider-wrapper">
+                            <label for="price">Max. Price</label>
+                            <div class="price-slider">
+                                <input class="input-price" type="range" id="price" name="maxPrice" value="0" autocomplete="off"
+                                    max="10000" step="100"
+                                    onclick="document.body.style.setProperty('--price', this.value);"
+                                    oninput="document.body.style.setProperty('--price', this.value);" />
+                                <span class="price" aria-hidden="true"></span>
+                            </div>
+                        </div>
+
+                        <div class="layover-slider-wrapper">
+                            <label for="layover">Max. Layover Hours</label>
+                            <div class="layover-slider">
+                                <input class="input-layover" type="range" id="layover" name="maxLayover" value="0" autocomplete="off"
+                                    max="24" step="1"
+                                    onclick="document.body.style.setProperty('--layover', this.value);"
+                                    oninput="document.body.style.setProperty('--layover', this.value);" />
+                                <span class="layover" aria-hidden="true"></span>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label for="date-picker">Preferred travel dates</label>
+                            <input type="date" id="date-picker" name="travel_date">
+                        </div>
+                    </div>
+                </fieldset>
+
+                <div class="description-section">
+                    <div class="Textarea">
+                        <label for="comments">Description of the perfect trip</label>
+                        <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="submit">
+                <input type="submit" value="Submit">
+            </div>
+        </fieldset>
+    </form>
+</main>
+</body>
+</html>
